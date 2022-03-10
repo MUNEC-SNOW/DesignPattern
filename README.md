@@ -17,3 +17,8 @@ This repo is aim to learning Design Pattern based on Head First
     an exist object dynamically. If you want to extends
     funcions, decorator provide another choise that
     differ from inheritance.
+## Factory Pattern
+    Factory is a pattern that definea interface for create
+    objects. However, the object which need to be instantiate
+    is chosen by the child clas. Factory function make te 
+    instanitiate delay from class to its child class.
