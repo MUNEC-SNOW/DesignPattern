@@ -12,3 +12,8 @@ This repo is aim to learning Design Pattern based on Head First
     of the objects' condition changes, all objects 
     that depend on it will get notified and update 
     itself automatically.
+## 3 Decorator Pattern 
+    Decorator is a pattern which add some things to
+    an exist object dynamically. If you want to extends
+    funcions, decorator provide another choise that
+    differ from inheritance.

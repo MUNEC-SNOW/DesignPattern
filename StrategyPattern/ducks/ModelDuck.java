@@ -1,9 +1,9 @@
-package StrategyPattern;
+package StrategyPattern.ducks;
 
 import StrategyPattern.behavior.Fly.FlyNoWay;
 import StrategyPattern.behavior.Quack.Quack;
 
-public class ModelDuck extends AbstractDuck{
+public class ModelDuck extends AbstractDuck {
     public ModelDuck(){
         flyBehavior = new FlyNoWay();
         quackBehavior = new Quack();

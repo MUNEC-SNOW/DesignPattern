@@ -8,7 +8,7 @@ import ObserverPattern.subject.WeatherData;
  * @author KW
  */
 public class WeatherStation {
-    public static void main(String[] args) {
+    public void testObserverPattern() {
         WeatherData weatherData = new WeatherData();
         CurrentConditionsDisplay currentDisplay = new CurrentConditionsDisplay(weatherData);
         ForecastDisplay forecastDisplay = new ForecastDisplay(weatherData);
