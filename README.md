@@ -22,3 +22,7 @@ This repo is aim to learning Design Pattern based on Head First
     objects. However, the object which need to be instantiate
     is chosen by the child clas. Factory function make te 
     instanitiate delay from class to its child class.
+## 5 Singleton Pattern
+    Singleton is a pattern which make sure that only one  
+    instantce of the object will be create, and provides a 
+    global access point.

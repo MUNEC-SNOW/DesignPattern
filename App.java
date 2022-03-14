@@ -1,6 +1,7 @@
 import DecoratorPattern.StarBuzzCoffee;
 import FactoryPattern.TestPizzaDrive;
 import ObserverPattern.WeatherStation;
+import SingletonPattern.DoubleCheckLockSingleton;
 import StrategyPattern.MiniDuck;
 
 /**
@@ -10,11 +11,13 @@ public class App {
     public static void main(String[] args) {
         MiniDuck testStgPtn = new MiniDuck();
         WeatherStation testObsPtn = new WeatherStation();
-        StarBuzzCoffee test = new StarBuzzCoffee();
+        StarBuzzCoffee testDecoPtn = new StarBuzzCoffee();
         TestPizzaDrive testFactPtn = new TestPizzaDrive();
+        DoubleCheckLockSingleton doubleCheckLockSingleton= DoubleCheckLockSingleton.getInstance();
+
         testStgPtn.testStrategyPattern();
         testObsPtn.testObserverPattern();
-        test.decoratorTestFunction();
+        testDecoPtn.decoratorTestFunction();
         testFactPtn.testFactory();
     }
 }
