@@ -26,3 +26,8 @@ This repo is aim to learning Design Pattern based on Head First
     Singleton is a pattern which make sure that only one  
     instantce of the object will be create, and provides a 
     global access point.
+## 6 Order Pattern
+    Order is a pattern that encapsulat requests into object.
+    it make able for you to use different request, queue, or 
+    other log requests in order to parameterize other object.
+    Order Pattern also support the undo operation.

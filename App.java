@@ -1,23 +1,31 @@
-import DecoratorPattern.StarBuzzCoffee;
-import FactoryPattern.TestPizzaDrive;
-import ObserverPattern.WeatherStation;
-import SingletonPattern.DoubleCheckLockSingleton;
-import StrategyPattern.MiniDuck;
+import OrderPattern.Commands.LightOffCommand;
+import OrderPattern.Commands.LightOnCommand;
+import OrderPattern.Commands.StereoOffWithCDCommand;
+import OrderPattern.Commands.StereoOnWithCDCommand;
+import OrderPattern.RemoteControl;
+import OrderPattern.function.Light;
+import OrderPattern.function.Stereo;
 
 /**
  * @author KW
  */
 public class App {
     public static void main(String[] args) {
-        MiniDuck testStgPtn = new MiniDuck();
-        WeatherStation testObsPtn = new WeatherStation();
-        StarBuzzCoffee testDecoPtn = new StarBuzzCoffee();
-        TestPizzaDrive testFactPtn = new TestPizzaDrive();
-        DoubleCheckLockSingleton doubleCheckLockSingleton= DoubleCheckLockSingleton.getInstance();
+        RemoteControl remoteControl = new RemoteControl();
+        Light livingRoomLight =new Light("LivingRoom");
+        Stereo stereo = new Stereo("LivingRoom");
+        LightOnCommand loc = new LightOnCommand(livingRoomLight);
+        LightOffCommand lfc = new LightOffCommand(livingRoomLight);
+        StereoOnWithCDCommand soc = new StereoOnWithCDCommand(stereo);
+        StereoOffWithCDCommand sfc  = new StereoOffWithCDCommand(stereo);
 
-        testStgPtn.testStrategyPattern();
-        testObsPtn.testObserverPattern();
-        testDecoPtn.decoratorTestFunction();
-        testFactPtn.testFactory();
+        remoteControl.setCommands(0, loc, lfc);
+        remoteControl.setCommands(1, soc, sfc);
+        System.out.println(remoteControl);
+
+        remoteControl.onButtonWasPushed(0);
+        remoteControl.onButtonWasPushed(1);
+        remoteControl.offButtonWasPushed(1);
+        remoteControl.offButtonWasPushed(0);
     }
 }
