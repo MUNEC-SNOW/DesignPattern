@@ -1,22 +1,13 @@
-import adapter.object.ADuck;
-import adapter.object.MDuck;
-import adapter.object.TurkeyAdapter;
-import adapter.object.WildTurkey;
+import TemplatePattern.CoffeeWithHook;
 
 /**
  * @author KW
  */
 public class App {
     public static void main(String[] args) {
-        MDuck duck = new MDuck();
-        WildTurkey turkey = new WildTurkey();
-        ADuck turkeyAdapter = new TurkeyAdapter(turkey);
-        testDuck(duck);
-        testDuck(turkeyAdapter);
-    }
+        CoffeeWithHook coffeeWithHook = new CoffeeWithHook();
 
-    static void testDuck(ADuck duck){
-        duck.quack();
-        duck.fly();
+        System.out.println("\nMaking coffee with Hook:");
+        coffeeWithHook.prepareRecipe();
     }
 }
