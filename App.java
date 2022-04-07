@@ -1,3 +1,4 @@
+import Iterator.*;
 import TemplatePattern.CoffeeWithHook;
 
 /**
@@ -5,9 +6,10 @@ import TemplatePattern.CoffeeWithHook;
  */
 public class App {
     public static void main(String[] args) {
-        CoffeeWithHook coffeeWithHook = new CoffeeWithHook();
-
-        System.out.println("\nMaking coffee with Hook:");
-        coffeeWithHook.prepareRecipe();
+        PancakeHouseMenu pancakeHouseMenu = new PancakeHouseMenu();
+        DinnerMMenu dinerMenu = new DinnerMMenu();
+        CafeMenu cafeMenu = new CafeMenu();
+        Waitress waitress = new Waitress((Menu) pancakeHouseMenu, dinerMenu, cafeMenu);
+        waitress.printMenu();
     }
 }
